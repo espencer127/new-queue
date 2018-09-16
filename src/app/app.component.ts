@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'newqueue';
+
+  data: Array<any> = [];
+  customers:Array<any>=[];
+
+  tab:number = 1;
+
+  setTab(num: number) {
+    this.tab = num;
+  }
+  
+  isSelected(num: number) {
+    return this.tab === num;
+  }
+  
 }
