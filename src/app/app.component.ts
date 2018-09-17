@@ -5,10 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'newqueue';
 
-  data: Array<any> = [];
+// Set up initial array of customers and tabbing
+export class AppComponent {
+
   customers:Array<any>=[];
 
   tab:number = 1;

@@ -1,15 +1,19 @@
+
+<!-- Set up the top toolbar -->
 <div >
   <mat-toolbar color="primary"  [ngSwitch]="tab">
     <span class="stuck-in-the-middle"></span>
     <button mat-raised-button color="primary"  (click)="setTab(1)">Customer View</button>
     <button mat-raised-button color="primary"  (click)="setTab(2)">Employee View</button>
-
   </mat-toolbar>
-
 </div>
 
+<!-- Customer and Employee facing views -->
 <div [ngSwitch]="tab">
-    <div *ngSwitchCase="1"> <app-customer-view [(customers)]="customers"></app-customer-view> </div>
-    <div *ngSwitchCase="2"><app-employee-view [(customers)]="customers"></app-employee-view> </div>
-
+    <div *ngSwitchCase="1">
+      <app-customer-view [(customers)]="customers"></app-customer-view>
+    </div>
+    <div *ngSwitchCase="2">
+      <app-employee-view [(customers)]="customers"></app-employee-view>
+    </div>
 </div>

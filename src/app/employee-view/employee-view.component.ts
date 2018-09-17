@@ -1,12 +1,15 @@
-import { Component, OnInit, Input,EventEmitter } from '@angular/core';
+import { Component, OnInit,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-employee-view',
   templateUrl: './employee-view.component.html',
   styleUrls: ['./employee-view.component.css'],
   inputs: ['customers'],
-outputs: ['customers'],
+  outputs: ['customers'],
 })
+
+// Set up the data-binding and logic for Delete button
+
 export class EmployeeViewComponent implements OnInit {
   customers: Array<any>;
   dataChange: EventEmitter<Array<any>> = new EventEmitter();
