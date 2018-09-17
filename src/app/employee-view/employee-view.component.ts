@@ -8,7 +8,7 @@ import { Component, OnInit,EventEmitter } from '@angular/core';
   outputs: ['customers'],
 })
 
-// Set up the data-binding and logic for Delete button
+// Set up the data-binding for "customer" array and logic for Delete button
 
 export class EmployeeViewComponent implements OnInit {
   customers: Array<any>;
@@ -21,8 +21,8 @@ export class EmployeeViewComponent implements OnInit {
     this.dataChange.emit(this.customers);
   }
 
-  removeIt(){
-    this.customers.splice(0,1);
+  removeIt(i){
+    this.customers.splice(i,1);
   }
 
 }
